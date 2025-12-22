@@ -1,0 +1,266 @@
+:root {
+    --swiper-navigation-color-custom: #00af37; /* Sets the color of the navigation arrows to red */
+    --swiper-theme-color-custom: #00af37;
+    --swiper-navigation-size: 30px; /* Adjusts the size of the arrows */
+}
+
+/* Font Naskh */
+@font-face {
+    font-family: "Naskh";
+    src: url("/fonts/Noto_Naskh_Arabic/NotoNaskhArabic-VariableFont_wght.ttf")
+        format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Font Playpen */
+@font-face {
+    font-family: "Playpen";
+    src: url("/fonts/Playpen_Sans_Arabic/PlaypenSansArabic-VariableFont_wght.ttf")
+        format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Font Cairo */
+@font-face {
+    font-family: "Cairo";
+    src: url("/fonts/Cairo_Arabic/Cairo-VariableFont_slnt,wght.ttf")
+        format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.logo-navbar {
+    width: 100px;
+    height: 100%;
+}
+.navbar-landing-page {
+    position: fixed;
+    top: 0%;
+    width: 100vw;
+    z-index: 1000;
+}
+
+.btn-translate-id,
+.btn-translate-en {
+    color: black;
+    border: none;
+    background-color: transparent;
+    width: 55px;
+    height: 35px;
+}
+
+.btn-translate-id:hover,
+.btn-translate-en:hover {
+    border-radius: 18px;
+    background-color: #00af37;
+    color: white;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+}
+
+.btn-translate-id.active,
+.btn-translate-en.active {
+    border-radius: 18px;
+    background-color: #008229;
+    color: white;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+}
+
+.headerImg {
+    width: 100vw;
+    height: 450px;
+}
+
+.headerImg p {
+    font-size: 40px;
+    font-weight: 600;
+    position: absolute;
+    left: 5%;
+    top: 350px;
+    color: white;
+}
+
+.headerImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    filter: brightness(50%);
+}
+
+.btn-alamin {
+    padding: 10px 30px;
+    background-color: #008229;
+    color: white;
+    border-radius: 18px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+}
+
+a.btn-alamin {
+    text-decoration: none;
+}
+
+.btn-alamin:hover {
+    background-color: #00af37;
+}
+
+.btn-alamin:active {
+    background-color: #006520;
+}
+
+.footer-navbar {
+    /* height: 300px; */
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+.footerGroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+}
+
+.footerLine {
+    background-color: white;
+    margin: 10px 0px;
+    width: 100%;
+    height: 2px;
+}
+
+.footerGroup {
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    flex-wrap: wrap;
+}
+
+.footerColumn {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 400px;
+}
+
+.footerLogo {
+    width: 150px;
+    margin-bottom: 10px;
+    height: 100%;
+}
+
+.medsosIconGroup {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footerCopyright {
+    position: relative;
+    bottom: 4%;
+    text-align: center;
+    font-size: 14px;
+    padding-bottom: 1%;
+}
+
+.medsosIcon {
+    width: 50px;
+    height: 50px;
+    font-size: 23px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+.medsosIcon.youtube {
+    background-color: #ff0000;
+    color: white;
+}
+
+.medsosIcon.facebook {
+    background-color: #3b5998;
+    color: white;
+}
+.medsosIcon.telegram {
+    background-color: #0088cc;
+    color: white;
+}
+.medsosIcon.tiktok {
+    background-color: #ffffff;
+    color: #000000;
+}
+.medsosIcon.instagram {
+    background: radial-gradient(
+        circle at 30% 107%,
+        #fdf497 0%,
+        #fdf497 5%,
+        #fd5949 45%,
+        #d6249f 60%,
+        #285aeb 90%
+    );
+    color: white;
+}
+.medsosIcon.whatsapp {
+    background-color: #25d366;
+    color: white;
+}
+
+.medsosIcon.youtube:hover,
+.medsosIcon.facebook:hover,
+.medsosIcon.telegram:hover,
+.medsosIcon.tiktok:hover,
+.medsosIcon.instagram:hover,
+.medsosIcon.whatsapp:hover {
+    opacity: 0.8;
+    font-size: 30px;
+}
+
+/* BEGIN - Knowledge Layout */
+
+.mainKnowledgeLayout {
+    display: flex;
+    flex-direction: row;
+}
+
+/* END - Knowledge Layout */
+
+@media screen and (max-width: 991px) {
+    /* .footer-navbar {
+        height: 100%;
+    } */
+
+    .footerCopyright {
+        bottom: 0%;
+        padding-bottom: 3.5%;
+    }
+
+    .medsosIconGroup {
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .footerColumn {
+        width: 50%;
+        align-items: center;
+    }
+}

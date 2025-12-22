@@ -1,0 +1,220 @@
+#platformMasjidContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding: 20px;
+}
+
+.platformMasjidCard {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: black;
+    top: 0px;
+    width: 250px;
+    height: 280px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0px 5px 5px #c4c4c4;
+    border-radius: 20px;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+}
+
+.platformMasjidCard:hover {
+    /* background-color: #00af37;
+    color: white; */
+    top: 10px;
+}
+
+/* .platformMasjidCard:hover .platformMasjidIcon {
+    background-color: white;
+} */
+
+.platformMasjidIcon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6%;
+    margin-bottom: 5%;
+    background-color: #00d644;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+.platformMasjidIcon img {
+    width: 60%;
+}
+
+.platformMasjidIcon img path {
+    fill: white;
+}
+
+.platformMasjidTitleCard {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 2%;
+}
+
+.platformMasjidTextCard {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+#platformMasjidCardGroup {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 60px;
+}
+
+/* BEGIN Quran App */
+
+#searchForm {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+#searchForm #searchInput {
+    width: 90%;
+    padding: 10px 20px;
+}
+
+.cardSuratGroup {
+    /* width: 90%; */
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.cardSurat {
+    width: 200px;
+    height: 200px;
+    padding-top: 21px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 30px;
+    box-shadow: 0px 5px 5px #c4c4c4;
+    border-radius: 20%;
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    -ms-border-radius: 20%;
+    -o-border-radius: 20%;
+    background: radial-gradient(
+            circle at top,
+            transparent 14%,
+            #e8faf6 15%,
+            #e8faf6 19%,
+            transparent 20%
+        ),
+        radial-gradient(
+            circle at bottom,
+            transparent 14%,
+            #e8faf6 15%,
+            #e8faf6 19%,
+            transparent 20%
+        ),
+        radial-gradient(
+            circle at right,
+            transparent 14%,
+            #e8faf6 15%,
+            #e8faf6 19%,
+            transparent 20%
+        ),
+        radial-gradient(
+            circle at left,
+            transparent 14%,
+            #e8faf6 15%,
+            #e8faf6 19%,
+            transparent 20%
+        ),
+        radial-gradient(circle at center, #e8faf6 25%, transparent 26%),
+        radial-gradient(circle at bottom left, #e8faf6 12%, transparent 13%),
+        radial-gradient(circle at bottom right, #e8faf6 12%, transparent 13%),
+        radial-gradient(circle at top left, #e8faf6 12%, transparent 13%),
+        radial-gradient(circle at top right, #e8faf6 12%, transparent 13%);
+    background-size: 3em 3em;
+    background-color: #ffffff;
+    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardSuratText {
+    position: relative;
+}
+
+.cardSuratText .titleArab {
+    font-family: "Cairo", sans-serif;
+    font-size: 30px;
+    margin-bottom: 5px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.cardSuratText .titleLatin {
+    font-size: 22px;
+    margin-bottom: 0px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.cardSuratText .titleArti {
+    font-size: 16px;
+    margin-bottom: 0px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.cardSuratButton a {
+    width: 100%;
+}
+
+.suratTextInfo {
+    margin-bottom: 70px;
+}
+
+.ayatSurat {
+    text-align: right;
+    margin-bottom: 70px;
+}
+
+.ayatSurat .ayatArab {
+    font-family: "Naskh", sans-serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+    line-height: 35px;
+}
+
+@media screen and (max-width: 991px) {
+    /* .cardSuratGroup {
+        justify-content: center;
+    } */
+    #searchForm #searchInput {
+        width: 100%;
+    }
+}
+
+/* END Quran App */

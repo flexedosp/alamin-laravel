@@ -1,0 +1,402 @@
+:root {
+    --swiper-navigation-color-custom: #00af37; /* Sets the color of the navigation arrows to red */
+    --swiper-theme-color-custom: #00af37;
+    --swiper-navigation-size: 30px; /* Adjusts the size of the arrows */
+}
+
+.main-content {
+    margin-top: 80px;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(
+        --swiper-pagination-color-custom,
+        var(--swiper-theme-color-custom)
+    ) !important;
+    opacity: var(--swiper-pagination-bullet-opacity, 1) !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--swiper-navigation-color-custom);
+}
+.slider-home {
+    height: 92vh;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+#beritaTerkiniContent .swiper,
+#artikelTerkiniContent .swiper {
+    /* padding: 0px 36px; */
+    width: 100%;
+    height: 400px;
+}
+
+#beritaTerkiniContent .swiper-slide,
+#artikelTerkiniContent .swiper-slide {
+    background-color: transparent;
+    width: 300px !important;
+    height: 100%;
+}
+
+#beritaTerkiniContent .swiper-slide.first,
+#artikelTerkiniContent .swiper-slide.first,
+#beritaTerkiniContent .swiper-slide.last,
+#artikelTerkiniContent .swiper-slide.last {
+    background-color: transparent;
+    width: 500px !important;
+    height: 100%;
+}
+
+/* #beritaTerkiniContent .swiper-wrapper,
+#artikelTerkiniContent .swiper-wrapper {
+    background-color: black;
+    width: 100%;
+} */
+
+.content-card {
+    box-shadow: 0px 5px 8px #c4c4c4;
+    background-color: white;
+    width: 100%;
+    height: 87%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.content-card .imgContentCard {
+    width: 90% !important;
+    height: 90% !important;
+    display: block;
+    border-radius: 20px;
+    object-fit: cover;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.content-card .imgContentCard img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 20px;
+    filter: brightness(50%) !important;
+    object-fit: cover;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.frost-layer {
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: 10% !important;
+    left: 50% !important;
+    width: 90%;
+    inset: 0;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        transparent 50%,
+        black 100%
+    );
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        transparent 50%,
+        black 100%
+    );
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.content-card .textInfoContent {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    bottom: 15%;
+    left: 50%;
+    color: white;
+    text-align: left;
+    width: 80%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.content-card .textInfoContent p {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.content-card .textInfoContent a {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    color: white;
+    background-color: #00af37;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.content-card .textInfoContent a:hover {
+    /* color: white; */
+    background-color: #05ca43;
+}
+
+#beritaTerkiniContent .swiper-pagination,
+#artikelTerkiniContent .swiper-pagination {
+    bottom: 0% !important;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    position: relative;
+    filter: brightness(30%);
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-filter: brightness(30%);
+}
+.swiper-slide .text-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    -webkit-transform: translate(-50%, -50%) !important;
+    -moz-transform: translate(-50%, -50%) !important;
+    -ms-transform: translate(-50%, -50%) !important;
+    -o-transform: translate(-50%, -50%) !important;
+    z-index: 500;
+}
+
+.swiper-pagination {
+    position: absolute !important;
+    bottom: 7% !important;
+}
+
+.home-div {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px;
+}
+
+#sekilasMasjidContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    box-shadow: 0px 5px 5px #c4c4c4;
+    padding: 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#imgSekilasMasjid {
+    width: 800px;
+    height: 400px;
+}
+
+#imgSekilasMasjid img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#sekilasMasjidText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 210px;
+    align-items: flex-start;
+    padding-left: 30px;
+    padding-top: 0px;
+    text-align: left;
+}
+
+#fasilitasMasjidContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding: 20px;
+}
+
+.fasilitasMasjidCard {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0px 5px 5px #c4c4c4;
+    border-radius: 20px;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+}
+
+.fasilitasMasjidCard:hover {
+    background-color: #00af37;
+    color: white;
+}
+
+.fasilitasMasjidCard:hover .fasilitasMasjidIcon {
+    background-color: white;
+}
+
+.fasilitasMasjidIcon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6%;
+    margin-bottom: 5%;
+    background-color: #00d644;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+.fasilitasMasjidIcon img {
+    width: 60%;
+}
+
+.fasilitasMasjidIcon img path {
+    fill: white;
+}
+
+.fasilitasMasjidTitleCard {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 2%;
+}
+
+.fasilitasMasjidTextCard {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+#fasilitasMasjidCardGroup {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 60px;
+}
+
+.platformMasjidButton {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+}
+
+#beritaTerkiniContent,
+#artikelTerkiniContent {
+    height: 50%;
+    width: 100%;
+}
+
+@media screen and (max-width: 991px) {
+    .home-div {
+        height: 100%;
+        padding: 100px 0px;
+    }
+
+    #beritaTerkiniContent .swiper,
+    #artikelTerkiniContent .swiper {
+        height: 400px;
+    }
+
+    #beritaTerkiniContent .swiper-slide.first,
+    #artikelTerkiniContent .swiper-slide.first,
+    #beritaTerkiniContent .swiper-slide.last,
+    #artikelTerkiniContent .swiper-slide.last {
+        width: 100% !important;
+    }
+
+    #beritaTerkiniContent .swiper-button-next,
+    #artikelTerkiniContent .swiper-button-next,
+    #beritaTerkiniContent .swiper-button-prev,
+    #artikelTerkiniContent .swiper-button-prev {
+        display: none;
+    }
+
+    #sekilasMasjidContent {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #sekilasMasjidText {
+        align-items: center;
+        padding-left: 0px;
+        padding-top: 30px;
+        text-align: center;
+        height: 100%;
+    }
+
+    #sekilasMasjidContent {
+        padding: 25px;
+    }
+
+    #imgSekilasMasjid {
+        width: 200px;
+        height: 200px;
+    }
+}

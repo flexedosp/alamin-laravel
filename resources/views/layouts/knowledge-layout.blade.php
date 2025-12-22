@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-{{-- <html lang="{{ $lang }}"> --}}
-<html lang="id">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -11,6 +10,7 @@
     <link rel="stylesheet" href="{{ asset('lib/bootstrap-icons/bootstrap-icons.min.css') }}">
     <link rel="stylesheet" href="{{ asset('lib/aos/aos.css') }}">
     <link rel="stylesheet" href="{{ asset('lib/sweetalert2/sweetalert2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('lib/swiper/swiper-bundle.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/site.css') }}">
     @yield('Styles')
 
@@ -36,8 +36,13 @@
     <div id="google_translate_element" style="position:absolute; left:-9999px; top:0;"></div>
     {{-- Header --}}
     @include('partials.header')
-    {{-- Content --}}
-    @yield('content')
+
+    <main class="mainKnowledgeLayout">
+        {{-- Sidebar --}}
+        @include('partials.sidebar-knowledge')
+        {{-- Content --}}
+        @yield('content')
+    </main>
     {{-- Footer --}}
     @include('partials.footer')
 
@@ -45,6 +50,7 @@
     <script src="{{ asset('lib/jquery/jquery-3.7.1.min.js') }}"></script>
     <script src="{{ asset('lib/bootstrap/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('lib/aos/aos.js') }}"></script>
+    <script src="{{ asset('lib/sweetalert2/sweetalert2.all.min.js') }}"></script>
     <script src="{{ asset('lib/swiper/swiper-bundle.min.js') }}"></script>
     <script>
         function googleTranslateElementInit() {

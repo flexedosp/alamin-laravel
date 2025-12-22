@@ -1,43 +1,43 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+<nav class="navbar navbar-expand-lg bg-white shadow-sm navbar-landing-page">
+    <div class="container">
+        <a class="navbar-brand" href="/"><img class="logo-navbar" src="{{ asset('assets/images/Logo_Alamin.svg') }}"
+                alt="Logo Al-Amin"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Beranda</a>
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 ">
+                <li class="nav-item mx-2">
+                    <a class="nav-link {{ $pageNameNav == 'Beranda' ? 'active' : '' }}" aria-current="page"
+                        href="{{ route('beranda') }}">Beranda</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Tentang Kami</a>
+                <li class="nav-item mx-2">
+                    <a class="nav-link {{ $pageNameNav == 'Tentang Kami' ? 'active' : '' }}"
+                        href="{{ route('tentang-kami') }}">Tentang
+                        Kami</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Berita</a>
+                <li class="nav-item mx-2">
+                    <a class="nav-link {{ $pageNameNav == 'Wawasan' ? 'active' : '' }}"
+                        href="{{ route('wawasan') }}">Wawasan</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Artikel</a>
+                <li class="nav-item mx-2">
+                    <a class="nav-link {{ $pageNameNav == 'Platform' ? 'active' : '' }}"
+                        href="{{ route('platform') }}">Platform</a>
                 </li>
-                {{-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </li> --}}
-            </ul>
-            {{-- <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form> --}}
+                <li class="nav-item mx-2">
+                    <a class="nav-link {{ $pageNameNav == 'Pusat Informasi' ? 'active' : '' }}"
+                        href="{{ route('info-center') }}">Pusat
+                        Informasi</a>
+                </li>
+                <li class="nav-item mx-2 d-lg-none d-flex flex-row">
+                    <button class="btn-translate-id active">ID</button>
+                    <button class="btn-translate-en">EN</button>
+                </li>
+        </div>
+        <div class="d-none d-lg-flex flex-lg-row">
+            <button class="btn-translate-id active">ID</button>
+            <button class="btn-translate-en">EN</button>
         </div>
     </div>
 </nav>
