@@ -31,6 +31,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Syawal";
+    src: url("/fonts/Syawal_Khidmat/Syawal Khidmat.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 .logo-navbar {
     width: 100px;
     height: 100%;
@@ -96,6 +103,8 @@
 }
 
 .btn-alamin {
+    width: auto;
+    font-size: inherit;
     padding: 10px 30px;
     background-color: #008229;
     color: white;
@@ -104,6 +113,10 @@
     -moz-border-radius: 18px;
     -ms-border-radius: 18px;
     -o-border-radius: 18px;
+}
+
+.btn-alamin.disabled {
+    background-color: #53a26c;
 }
 
 a.btn-alamin {
@@ -262,5 +275,14 @@ a.btn-alamin {
     .footerColumn {
         width: 50%;
         align-items: center;
+    }
+
+    .btn-alamin {
+        height: 100%;
+        padding: 10px 20px;
+    }
+
+    a.btn-alamin {
+        font-size: 14px !important;
     }
 }

@@ -26,7 +26,7 @@
                             <p class="platformMasjidTitleCard">Al-Quran</p>
                             <p class="platformMasjidTextCard">Pelajari Kitab Suci Umat Islam</p>
                         </div>
-                        <a href="{{ route('platform.quran') }}" class="btn-alamin platformMasjidButton">
+                        <a href="{{ route('platform.quran') }}" class="btn-alamin mt-3 mt-lg-0 platformMasjidButton">
                             Akses Aplikasi
                         </a>
                     </div>
@@ -38,7 +38,7 @@
                             <p class="platformMasjidTitleCard">Hadits</p>
                             <p class="platformMasjidTextCard">Pelajari Sunnah-Sunnah yang diajarkan Nabi</p>
                         </div>
-                        <a href="{{ route('platform.hadits') }}" class="btn-alamin platformMasjidButton">
+                        <a href="{{ route('platform.hadits') }}" class="btn-alamin mt-3 mt-lg-0 platformMasjidButton">
                             Akses Aplikasi
                         </a>
                     </div>
@@ -52,9 +52,12 @@
                                 Sekitar)
                             </p>
                         </div>
-                        <a href="{{ route('platform.quran') }}" class="btn-alamin platformMasjidButton">
+                        <button class="btn btn-alamin underDevBtn mt-3 mt-lg-0 platformMasjidButton">
                             Akses Aplikasi
-                        </a>
+                        </button>
+                        {{-- <a href="{{ route('platform.quran') }}" class="btn-alamin platformMasjidButton">
+                            Akses Aplikasi
+                        </a> --}}
                     </div>
                 </div>
             </div>

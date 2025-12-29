@@ -76,20 +76,114 @@ class UserController extends Controller
     {
         $data['title'] = "Hadits App - Masjid Al-Amin Petukangan";
         $data['pageNameNav'] = "Hadits App";
-        $data['hadithData'] = $this->ApiController->hadits(request());
-        var_dump($data['hadithData']);
+        $data['haditsData'] = $this->ApiController->hadits(null, null, null);
         return view("user/platform/hadits", $data);
     }
 
-    // public function haditsDetail(string $id)
-    // {
-    //     $data['hadithData'] = $this->ApiController->hadits($id);
-    //     $data['title'] = "Quran App - Masjid Al-Amin Petukangan";
-    //     $data['pageNameNav'] = "Quran App";
-    //     // var_dump($data['quranData']['data'][0]);
-    //     // var_dump(env('EQURAN_API_URL'));
-    //     return view("user/platform/quranDetail", $data);
-    // }
+    public function listHadits(
+        string $name,
+        ?string $number1 = null,
+        ?string $number2 = null
+    ) {
+        // Default pagination
+        $perPage = 20;
+
+        $start = $number1 ? (int) $number1 : 1;
+        $end   = $number2 ? (int) $number2 : null;
+
+
+        // Panggil API
+        $getCount = $this->ApiController->countHadits($name);
+        // dd($haditsData);
+        // Validasi API response
+        if (!$getCount || !isset($getCount['data'])) {
+            abort(404, 'Data hadits tidak ditemukan');
+        }
+
+        $available = $getCount['data']['available'];
+
+        // Jika total data lebih kecil dari 20, kita ubah start menjadi 1 secara otomatis
+        if ($available < 20) {
+            return redirect()->route('platform.listHadits', [
+                'id' => $name,
+                'number1' => 1,
+                'number2' => $available
+            ]);
+        }
+
+        // Jika data cukup (>= 20), maka kita cek apakah end melebihi available
+        if ($end > $available) {
+            // Tapi tetap tampilkan 20 data, mulai dari start, sampai end = start + 19
+            // Tapi jangan melebihi available
+            $finalEnd = min($start + 19, $available);
+            // dd($finalEnd);
+
+            return redirect()->route('platform.listHadits', [
+                'id' => $name,
+                'number1' => $start,
+                'number2' => $finalEnd
+            ]);
+        }
+
+        $haditsData = $this->ApiController->hadits($name, $start, $end);
+
+        // dd($haditsData);
+
+        // Total hadits tersedia
+        // $count = $haditsData['data']['available'] ?? 0;
+        $totalPages = $available > 0 ? ceil($available / $perPage) : 1;
+        $currentPage = ceil($end / $perPage);
+
+        // Next & Prev range
+        $nextStart = $start + $perPage;
+        $nextEnd   = $end + $perPage;
+
+        $prevStart = max(1, $start - $perPage);
+        $prevEnd   = max($perPage, $end - $perPage);
+
+
+        if ($currentPage == $totalPages && $prevEnd - $prevStart != $perPage - 1) {
+            $prevEnd = $prevStart + $perPage - 1;
+        }
+        if ($currentPage == $totalPages - 1 && $nextEnd > $available) {
+            $nextEnd = $available;
+        }
+
+        // dd($prevEnd - $prevStart);
+
+        $data = [
+            'haditsData'   => $haditsData,
+            'title'        => $haditsData['data']['name'] . ' - Masjid Al-Amin Petukangan',
+            'pageNameNav'  => 'Hadits App',
+
+            // pagination data
+            'currentPage' => $currentPage,
+            'totalPages'  => $totalPages,
+            'nextStart'  => $nextStart,
+            'nextEnd'    => $nextEnd,
+            'prevStart'  => $prevStart,
+            'prevEnd'    => $prevEnd,
+            'hasNext'     => $end < $available,
+            'hasPrev'     => $start > 1,
+        ];
+        // dd($data);
+        return view("user/platform/haditsDetail", $data);
+        // return view('user.platform.listHadits', $data);
+    }
+
+    public function haditsDetail(string $name, string $number)
+    {
+        if ($name && $number) {
+            $data['haditsData'] = $this->ApiController->hadits($name, $number, null);
+        } else {
+            return redirect()->route('platform.hadits');
+        }
+        $data['title'] = $data['haditsData']['name'] . " - Masjid Al-Amin Petukangan";
+        $data['pageNameNav'] = "Hadits App";
+        // var_dump($data['quranData']['data'][0]);
+        // var_dump(env('EQURAN_API_URL'));
+        return view("user/platform/haditsDetail", $data);
+    }
     // END - Public Access
 
     // BEGIN - User Access

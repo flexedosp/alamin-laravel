@@ -17,6 +17,12 @@ return [
     'postmark' => [
         'key' => env('POSTMARK_API_KEY'),
     ],
+    'hadith_api' => [
+        'url' => env('HADITH_API_URL'),
+    ],
+    'equran_api' => [
+        'url' => env('EQURAN_API_URL'),
+    ],
 
     'resend' => [
         'key' => env('RESEND_API_KEY'),

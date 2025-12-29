@@ -16,7 +16,17 @@
         </div>
 
         <div class="container py-5">
-            <div id="searchForm" data-aos="fade-up">
+            <div class="toast fade show align-items-center text-bg-warning border-0 w-100" data-aos="fade-up" role="alert"
+                aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        Perhatian! Fitur ini masih dalam pengembangan.
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                        aria-label="Close"></button>
+                </div>
+            </div>
+            <div id="searchForm" class="mt-5" data-aos="fade-up">
                 <p class="fs-5 fw-semibold">Pencarian Nama Surat</p>
                 <input type="text" id="searchInput" class="form-control mb-3"
                     placeholder="Cari surat (contoh: al-baqarah)">

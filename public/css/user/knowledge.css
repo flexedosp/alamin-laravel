@@ -1,0 +1,123 @@
+.content-card {
+    position: relative;
+    margin: 5px 14px;
+    box-shadow: 0px 5px 8px #c4c4c4;
+    background-color: white;
+    width: 250px;
+    height: 300px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Agar border-radius bekerja dengan benar pada gambar */
+}
+
+.content-card .imgContentCard {
+    width: 90%;
+    height: 90%;
+    display: block;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.content-card .imgContentCard img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    filter: brightness(50%);
+    object-fit: cover;
+}
+
+/* Perbaikan frost-layer */
+.frost-layer {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 90%;
+    height: 96%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        transparent 50%,
+        black 100%
+    );
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        transparent 50%,
+        black 100%
+    );
+    border-radius: 20px;
+    /*Removetransform: translateX, karena sudah berada di posisi absolut */
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.content-card .textInfoContent {
+    position: absolute;
+    display: flex;
+    width: 73% !important;
+    flex-direction: column;
+    align-items: flex-end;
+    bottom: 12%;
+    left: 14%;
+    color: white;
+    text-align: left;
+    width: 16%;
+    /* Hapus transform: translateX(-3.5%), karena left sudah diatur */
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+.content-card .textInfoContent p {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.content-card .textInfoContent a {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    color: white;
+    background-color: #00af37;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.content-card .textInfoContent a:hover {
+    background-color: #05ca43;
+}
+
+#searchFormKnowledge {
+    display: flex;
+    width: 100%;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+#searchFormKnowledge #searchInput {
+    width: 60%;
+    padding: 10px 20px;
+}
+
+#knowledgeContainer {
+    margin: 0px auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 60px;
+}

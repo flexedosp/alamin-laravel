@@ -7,7 +7,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 ">
+            <ul class="navbar-nav mx-auto mt-2 mt-lg-auto mb-2 mb-lg-0 text-center">
                 <li class="nav-item mx-2">
                     <a class="nav-link {{ $pageNameNav == 'Beranda' ? 'active' : '' }}" aria-current="page"
                         href="{{ route('beranda') }}">Beranda</a>
@@ -30,7 +30,7 @@
                         href="{{ route('info-center') }}">Pusat
                         Informasi</a>
                 </li>
-                <li class="nav-item mx-2 d-lg-none d-flex flex-row">
+                <li class="nav-item mx-2 d-lg-none d-flex justify-content-center">
                     <button class="btn-translate-id active">ID</button>
                     <button class="btn-translate-en">EN</button>
                 </li>

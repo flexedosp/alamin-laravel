@@ -105,7 +105,7 @@
                 <p class="fs-1 fw-bold mb-4 text-center">Berita Terkini</p>
                 <div class="swiper mySwiper2">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide first">
+                        <div class="swiper-slide first d-none d-lg-block">
                             <div class="content-card">
                                 <div class="d-flex flex-column">
                                     <p class="fs-1 fw-bold mb-1">Cek Berita Terkini</p>
@@ -169,7 +169,7 @@
                 <p class="fs-1 fw-bold mb-4 text-center">Artikel Terkini</p>
                 <div class="swiper mySwiper3">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide first">
+                        <div class="swiper-slide first d-none d-lg-block">
                             <div class="content-card">
                                 <div class="d-flex flex-column">
                                     <p class="fs-1 fw-bold mb-1">Cek Artikel Terkini</p>

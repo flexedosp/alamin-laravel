@@ -44,6 +44,7 @@
     {{-- Javascrfipt --}}
     <script src="{{ asset('lib/jquery/jquery-3.7.1.min.js') }}"></script>
     <script src="{{ asset('lib/bootstrap/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('lib/sweetalert2/sweetalert2.all.min.js') }}"></script>
     <script src="{{ asset('lib/aos/aos.js') }}"></script>
     <script src="{{ asset('lib/swiper/swiper-bundle.min.js') }}"></script>
     <script>

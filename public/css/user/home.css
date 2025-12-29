@@ -368,7 +368,7 @@
     #artikelTerkiniContent .swiper-slide.first,
     #beritaTerkiniContent .swiper-slide.last,
     #artikelTerkiniContent .swiper-slide.last {
-        width: 100% !important;
+        width: 60% !important;
     }
 
     #beritaTerkiniContent .swiper-button-next,

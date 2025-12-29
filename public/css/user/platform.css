@@ -83,6 +83,12 @@
     row-gap: 60px;
 }
 
+@media screen and (max-width: 991px) {
+    .platformMasjidCard {
+        height: auto;
+    }
+}
+
 /* BEGIN Quran App */
 
 #searchForm {
@@ -218,3 +224,121 @@
 }
 
 /* END Quran App */
+
+/* BEGIN Hadits App */
+.middleInfoPage {
+    font-size: inherit;
+}
+
+.cardHaditsGroup {
+    /* width: 90%; */
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.cardHadits {
+    position: relative;
+    /* width: 100%; */
+    /* max-width: 260px; */
+    width: 200px;
+    height: 200px;
+    background-color: #f9fafb;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0px 5px 5px #c4c4c4;
+}
+
+.cardHaditsDetail {
+    position: relative;
+    /* width: 100%; */
+    /* max-width: 260px; */
+    width: 90%;
+    background-color: #f9fafb;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0px 5px 5px #c4c4c4;
+}
+
+/* Background grid */
+.cardHaditsBg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    background-image: linear-gradient(to right, #d1d5db 1px, transparent 1px),
+        linear-gradient(to bottom, #d1d5db 1px, transparent 1px);
+    background-size: 20px 20px;
+
+    -webkit-mask-image: radial-gradient(
+        ellipse 120% 120% at 0% 100%,
+        #000 40%,
+        transparent 100%
+    );
+    mask-image: radial-gradient(
+        ellipse 120% 120% at 0% 100%,
+        #000 40%,
+        transparent 100%
+    );
+}
+
+/* MAIN FLEX CONTAINER */
+.cardHaditsContent {
+    position: relative;
+    z-index: 1;
+
+    height: 100%;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* KEY POINT */
+    align-items: center; /* horizontal center */
+}
+
+/* TOP */
+.cardTop {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.titleHadits {
+    font-family: "Syawal", sans-serif;
+    font-size: 1.7rem;
+    margin-bottom: 0px;
+    line-height: 25px;
+    color: #111827;
+}
+
+.titleArti {
+    font-size: 0.7rem;
+    /* font-weight: 600; */
+    color: #111827;
+}
+
+.lineBlack {
+    width: 130px;
+    height: 2px;
+    background: #111;
+    margin: 8px auto 0;
+}
+
+/* BOTTOM */
+.cardBottom {
+    display: flex;
+    justify-content: center;
+}
+
+.noHadits {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 991px) {
+    .middleInfoPage {
+        font-size: 14px;
+    }
+}
+/* END Hadits App */
