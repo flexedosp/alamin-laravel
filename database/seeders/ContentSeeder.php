@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\Content;
+use App\Models\ContentModel;
 
 class ContentSeeder extends Seeder
 {
@@ -14,60 +14,87 @@ class ContentSeeder extends Seeder
      */
     public function run()
     {
-        // Menambahkan beberapa dummy data untuk model Content
-        Content::insert([
+        // Menambahkan 3 berita (group_content_id = 1)
+        ContentModel::insert([
             [
-                'title' => 'Pengantar Islam',
-                'content' => 'Islam adalah agama yang diturunkan oleh Allah SWT melalui Nabi Muhammad SAW. Islam mengajarkan ajaran tentang tauhid, akhlak, dan kehidupan akhirat.',
+                'title' => 'Pemerintah Resmi Luncurkan Program Zakat Nasional 2025',
+                'content' => 'Dalam acara peluncuran di Jakarta, pemerintah secara resmi meluncurkan Program Zakat Nasional 2025 yang bertujuan meningkatkan kesadaran zakat dan memperluas manfaatnya bagi masyarakat prasejahtera. Program ini akan melibatkan 5000 lembaga amil zakat di seluruh Indonesia.',
+                'slug' => 'pemerintah-luncurkan-zakat-nasional-2025',
+                'img_header' => 'zakat-header.jpg',
                 'group_content_id' => 1,
                 'created_at' => now(),
-                'created_by' => 1,
+                'created_by' => 'Admin',
                 'updated_at' => now(),
-                'updated_by' => 1,
+                'updated_by' => null,
                 'deleted_at' => null,
                 'deleted_by' => null,
             ],
             [
-                'title' => 'Sejarah Masjid Al-Amin',
-                'content' => 'Masjid Al-Amin dibangun pada tahun 1985 di Petukangan, Jakarta Selatan. Dengan kapasitas 500 jamaah, masjid ini menjadi pusat kegiatan keagamaan masyarakat sekitar.',
+                'title' => 'Gempa Bumi 5,4 Skala Richter Guncang Kota Bandung',
+                'content' => 'Gempa bumi berkekuatan 5,4 Skala Richter mengguncang Kota Bandung pada hari Senin pagi pukul 06.15 WIB. Tidak ada korban jiwa dilaporkan, tetapi beberapa bangunan mengalami kerusakan ringan, termasuk dua sekolah di wilayah Cimahi.',
+                'slug' => 'gempa-bumi-54-skala-richter-guncang-bandung',
+                'img_header' => 'gempa-header.jpg',
+                'group_content_id' => 1,
+                'created_at' => now(),
+                'created_by' => 'Admin',
+                'updated_at' => now(),
+                'updated_by' => null,
+                'deleted_at' => null,
+                'deleted_by' => null,
+            ],
+            [
+                'title' => 'Pendaftaran Siswa Baru 2025 Resmi Dibuka di Seluruh Sekolah Negeri',
+                'content' => 'Pemerintah Daerah Jawa Barat telah membuka pendaftaran siswa baru untuk tahun ajaran 2025/2026 secara online mulai 1 Januari 2025. Calon peserta didik dapat mendaftar melalui portal PPDB Online dengan berbagai pilihan sekolah berdasarkan zonasi.',
+                'slug' => 'pendaftaran-siswa-baru-2025-dibuka',
+                'img_header' => 'pendaftaran-header.jpg',
+                'group_content_id' => 1,
+                'created_at' => now(),
+                'created_by' => 'Admin',
+                'updated_at' => now(),
+                'updated_by' => null,
+                'deleted_at' => null,
+                'deleted_by' => null,
+            ],
+        ]);
+
+        // Menambahkan 3 artikel (group_content_id = 2)
+        ContentModel::insert([
+            [
+                'title' => 'Peran Islam dalam Membentuk Budaya Kehidupan Berkelanjutan',
+                'content' => 'Islam tidak hanya mengajarkan tentang ibadah ritual, tetapi juga membentuk kesadaran akan kelestarian alam. Ajaran seperti "Khalifah di bumi" dan larangan pemborosan menekankan pentingnya menjaga lingkungan sebagai kewajiban bersama.',
+                'slug' => 'peran-islam-dalam-keberlanjutan-lingkungan',
+                'img_header' => 'sustainability-header.jpg',
                 'group_content_id' => 2,
                 'created_at' => now(),
-                'created_by' => 2,
+                'created_by' => 'Admin',
                 'updated_at' => now(),
-                'updated_by' => 2,
+                'updated_by' => null,
                 'deleted_at' => null,
                 'deleted_by' => null,
             ],
             [
-                'title' => 'Tata Cara Shalat Lima Waktu',
-                'content' => 'Shalat lima waktu meliputi Shubuh, Dzuhur, Ashar, Maghrib, dan Isya. Setiap shalat memiliki rakaat dan bacaan yang berbeda-beda.',
-                'group_content_id' => 3,
+                'title' => 'Tantangan dan Peluang Di Balik Era Digital bagi Generasi Muda Muslim',
+                'content' => 'Di tengah kemajuan teknologi, generasi muda muslim dihadapkan pada tantangan moral dan akhlak dalam bermedia sosial. Namun, teknologi juga membuka peluang besar untuk menyebarkan ilmu agama secara global melalui podcast, channel YouTube, dan aplikasi pembelajaran.',
+                'slug' => 'tantangan-dan-peluang-era-digital-untuk-muda-muslim',
+                'img_header' => 'digital-islam-header.jpg',
+                'group_content_id' => 2,
                 'created_at' => now(),
-                'created_by' => 1,
+                'created_by' => 'Admin',
                 'updated_at' => now(),
-                'updated_by' => 1,
+                'updated_by' => null,
                 'deleted_at' => null,
                 'deleted_by' => null,
             ],
             [
-                'title' => 'Kerukunan Beragama di Indonesia',
-                'content' => 'Indonesia dikenal sebagai negara dengan kerukunan beragama yang tinggi. Berbagai agama hidup berdampingan secara damai.',
-                'group_content_id' => 4,
+                'title' => 'Membangun Hubungan yang Sehat dalam Keluarga Berdasarkan Nilai Islam',
+                'content' => 'Islam menekankan pentingnya keharmonisan keluarga sebagai fondasi masyarakat yang kuat. Dengan menerapkan prinsip saling menghormati, berkomunikasi jujur, dan bersikap sabar, setiap anggota keluarga dapat merasa dicintai dan dihargai.',
+                'slug' => 'hubungan-sehat-di-keluarga-berdasarkan-islam',
+                'img_header' => 'family-header.jpg',
+                'group_content_id' => 2,
                 'created_at' => now(),
-                'created_by' => 3,
+                'created_by' => 'Admin',
                 'updated_at' => now(),
-                'updated_by' => 3,
-                'deleted_at' => null,
-                'deleted_by' => null,
-            ],
-            [
-                'title' => 'Manfaat Bacaan Doa Harian',
-                'content' => 'Membaca doa harian dapat mempererat hubungan dengan Allah SWT dan membantu menjaga konsentrasi dalam aktivitas sehari-hari.',
-                'group_content_id' => 1,
-                'created_at' => now(),
-                'created_by' => 2,
-                'updated_at' => now(),
-                'updated_by' => 2,
+                'updated_by' => null,
                 'deleted_at' => null,
                 'deleted_by' => null,
             ],

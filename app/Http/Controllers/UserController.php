@@ -63,10 +63,24 @@ class UserController extends Controller
     {
         $getDetail = $this->ApiController->quran($id);
         $getTafsir = $this->ApiController->quran($id, 'tafsir');
-        $data['quranData'] = $getDetail['data'];
-        $data['tafsirData'] = $getTafsir['data'];
-        $data['title'] = "Quran App - Masjid Al-Amin Petukangan";
-        $data['pageNameNav'] = "Quran App";
+        // $data['quranData'] = $getDetail['data'];
+        // $data['tafsirData'] = $getTafsir['data'];
+        // $data['title'] = "Quran App - Masjid Al-Amin Petukangan";
+        // $data['pageNameNav'] = "Quran App";
+
+        $data = [
+            'quranData' => $getDetail['data'],
+            'tafsirData' => $getTafsir['data'],
+            'nomorSurat' => $getDetail['data']['nomor'],
+            'title' => "Quran App - Masjid Al-Amin Petukangan",
+            'pageNameNav' => "Quran App",
+            'nextNomorSurat' => isset($getDetail['data']['suratSelanjutnya']['nomor']) ? (int) $getDetail['data']['suratSelanjutnya']['nomor'] : null,
+            'nextNamaSurat' => isset($getDetail['data']['suratSelanjutnya']['namaLatin']) ? $getDetail['data']['suratSelanjutnya']['namaLatin'] : null,
+            'prevNomorSurat' => isset($getDetail['data']['suratSebelumnya']['nomor']) ? (int) $getDetail['data']['suratSebelumnya']['nomor'] : null,
+            'prevNamaSurat' => isset($getDetail['data']['suratSebelumnya']['namaLatin']) ? $getDetail['data']['suratSebelumnya']['namaLatin'] : null,
+        ];
+
+        // dd($data);
         // var_dump($data['quranData']);
         // var_dump(env('EQURAN_API_URL'));
         return view("user/platform/quranDetail", $data);

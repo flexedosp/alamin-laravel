@@ -38,6 +38,39 @@
     font-style: normal;
 }
 
+/* BEGIN Embed Map */
+.embed-map-responsive {
+    position: relative;
+    text-align: right;
+    width: 100%;
+    height: 0;
+    padding-bottom: 80%;
+}
+
+.embed-map-container {
+    overflow: hidden;
+    background: none !important;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.embed-map-frame {
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* END Embed Map */
+
+.mapEmbedAlamin,
+.contactAlamin {
+    width: 45%;
+}
+
 .logo-navbar {
     width: 100px;
     height: 100%;
@@ -81,7 +114,8 @@
 }
 
 .headerImg {
-    width: 100vw;
+    /* width: 100vw; */
+    width: 100%;
     height: 450px;
 }
 
@@ -261,6 +295,10 @@ a.btn-alamin {
     /* .footer-navbar {
         height: 100%;
     } */
+    .mapEmbedAlamin,
+    .contactAlamin {
+        width: 100%;
+    }
 
     .footerCopyright {
         bottom: 0%;

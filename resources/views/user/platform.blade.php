@@ -11,7 +11,7 @@
 @section('content')
     <div class="mt-5">
         <div class="headerImg">
-            <img src="{{ asset('assets/images/header~1.png') }}" alt="">
+            <img src="{{ asset('assets/images/platform-header-2.png') }}" alt="">
             <p data-aos="fade-left">Platform</p>
         </div>
         <div class="container py-5" data-aos="fade-up">

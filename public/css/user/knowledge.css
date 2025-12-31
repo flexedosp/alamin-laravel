@@ -4,7 +4,7 @@
     box-shadow: 0px 5px 8px #c4c4c4;
     background-color: white;
     width: 250px;
-    height: 300px;
+    height: 350px;
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -99,6 +99,31 @@
     background-color: #05ca43;
 }
 
+.content-card .categoryContent {
+    position: absolute;
+    top: -50%;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 13%;
+    background-color: #008229;
+    -webkit-border-radius: 13%;
+    -moz-border-radius: 13%;
+    -ms-border-radius: 13%;
+    -o-border-radius: 13%;
+}
+
+.content-card .dateContent {
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+.content-card .titleContent {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
 #searchFormKnowledge {
     display: flex;
     width: 100%;
@@ -106,6 +131,8 @@
     align-items: center;
     flex-direction: column;
     margin-bottom: 40px;
+    position: relative;
+    z-index: 900;
 }
 
 #searchFormKnowledge #searchInput {
@@ -114,10 +141,18 @@
 }
 
 #knowledgeContainer {
-    margin: 0px auto;
-    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    width: 80%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     row-gap: 60px;
+}
+
+@media screen and (max-width: 991px) {
+    #knowledgeContainer {
+        margin-top: 10px;
+    }
 }

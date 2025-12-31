@@ -12,13 +12,32 @@
     <div class="mt-5">
         <div class="headerImg">
             <img src="{{ asset('assets/images/quran-header.jpg') }}" alt="Header Image">
-            <p lang="ar" data-aos="fade-left">{{ $quranData['nama'] }} - {{ $quranData['namaLatin'] }} -
+            <p lang="ar" class="fs-2" data-aos="fade-left">{{ $quranData['nama'] }} - {{ $quranData['namaLatin'] }} -
                 {{ $quranData['arti'] }}</p>
         </div>
 
         <div class="container py-5">
+            <div id="navUpQuran" class="d-flex justify-content-between align-items-center w-100 mb-4" data-aos="fade-up">
+                @if ($prevNomorSurat)
+                    <a translate="no"
+                        href="{{ isset($prevNomorSurat) ? route('platform.quranDetail', ['id' => $prevNomorSurat]) : 'javascript:void(0)' }}"
+                        class="btn-alamin text-center {{ isset($prevNomorSurat) ? '' : 'navPageLimit' }}"><span
+                            class="d-none d-lg-block">Sebelumnya : </span><span>{{ $prevNamaSurat }}</span><span
+                            class="d-lg-none d-block fs-6"><i class="bi bi-arrow-left-circle-fill"></i></span></a>
+                @endif
+                <a class="btn-alamin text-center d-flex align-items-center mx-3 mx-lg-auto"
+                    href="{{ route('platform.quran') }}">Kembali Ke
+                    Daftar Surah</a>
+                @if ($nextNomorSurat)
+                    <a translate="no"
+                        href="{{ isset($nextNomorSurat) ? route('platform.quranDetail', ['id' => $nextNomorSurat]) : 'javascript:void(0)' }}"
+                        class="btn-alamin text-center {{ isset($nextNomorSurat) ? '' : 'navPageLimit' }}"><span
+                            class="d-none d-lg-block">Berikutnya : </span><span>{{ $nextNamaSurat }}</span><span
+                            class="d-lg-none d-block fs-6"><i class="bi bi-arrow-right-circle-fill"></i></a>
+                @endif
+            </div>
             @if ($quranData)
-                <div class="suratTextInfo">
+                <div class="suratTextInfo" data-aos="fade-up">
                     {{-- <p lang="ar" class="titleSuratArab">{{ $quranData['nama'] }}</p> --}}
                     <p lang="ar" class="titleSurat"> Nama Surah : {{ $quranData['nama'] }} -
                         {{ $quranData['namaLatin'] }}</p>
@@ -29,7 +48,7 @@
                     </p>
                     <p class="deskripsiSurat">{!! $quranData['deskripsi'] !!}</p>
                 </div>
-                <div class="suratAyat">
+                <div class="suratAyat" data-aos="fade-up">
                     @if ($quranData['nomor'] == 1)
                         <div class="ayatSurat">
                             <p lang="ar" class="ayatArab">أَعُوذُ بِاللّٰهِ مِنَ الشَّيْطَانِ الرَّجِيمِ
@@ -59,8 +78,7 @@
                         <p class="ayatIndonesia">Maha Benarlah Allah Yang Maha Agung</p>
                     </div>
                 </div>
-
-                <div class="tafsirAyat">
+                <div class="tafsirAyat" data-aos="fade-up">
                     <p class="fs-1">Tafsir Per Ayat</p>
                     <div class="accordion accordion-flush" id="accordionTafsir">
                         @foreach ($tafsirData['tafsir'] as $tafsir)
@@ -89,7 +107,7 @@
                     </ol> --}}
                 </div>
             @else
-                <div class="alert alert-danger">
+                <div class="alert alert-danger" data-aos="fade-up">
                     <strong>❌ Gagal Mengambil Data Al-Qur'an:</strong>
                     @if ($quranData === null)
                         API tidak merespons atau koneksi terputus.
@@ -98,5 +116,24 @@
                     @endif
                 </div>
             @endif
+            <div id="navDownQuran" class="d-flex justify-content-between align-items-center w-100 mt-4" data-aos="fade-up">
+                @if ($prevNomorSurat)
+                    <a translate="no"
+                        href="{{ isset($prevNomorSurat) ? route('platform.quranDetail', ['id' => $prevNomorSurat]) : 'javascript:void(0)' }}"
+                        class="btn-alamin text-center {{ isset($prevNomorSurat) ? '' : 'navPageLimit' }}"><span
+                            class="d-none d-lg-block">Sebelumnya : </span><span>{{ $prevNamaSurat }}</span><span
+                            class="d-lg-none d-block fs-6"><i class="bi bi-arrow-left-circle-fill"></i></span></a>
+                @endif
+                <a class="btn-alamin text-center d-flex align-items-center mx-3 mx-lg-auto"
+                    href="{{ route('platform.quran') }}">Kembali Ke
+                    Daftar Surah</a>
+                @if ($nextNomorSurat)
+                    <a translate="no"
+                        href="{{ isset($nextNomorSurat) ? route('platform.quranDetail', ['id' => $nextNomorSurat]) : 'javascript:void(0)' }}"
+                        class="btn-alamin text-center {{ isset($nextNomorSurat) ? '' : 'navPageLimit' }}"><span
+                            class="d-none d-lg-block">Berikutnya : </span><span>{{ $nextNamaSurat }}</span><span
+                            class="d-lg-none d-block fs-6"><i class="bi bi-arrow-right-circle-fill"></i></a>
+                @endif
+            </div>
         </div>
     @endsection
