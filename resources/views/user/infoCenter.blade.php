@@ -44,7 +44,12 @@
                         <tr>
                             <th scope="row">Telepon</th>
                             <td>:</td>
-                            <td>Otto</td>
+                            <td>0856-7154-114 (Alfin)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Email</th>
+                            <td>:</td>
+                            <td>sekretariat@masjidalamin.or.id</td>
                         </tr>
                     </table>
                     {{-- <ul>

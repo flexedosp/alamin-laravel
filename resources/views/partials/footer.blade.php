@@ -25,8 +25,13 @@
     </div>
     <div class="footerCopyright">
         <div class="footerLine"></div>
-        <p class="mb-0 px-3">
-            2025 © Hak Cipta. Masjid Al-Amin | Powered by Al-Amin IT Team
-        </p>
+        <div class="d-flex justify-content-evenly">
+            <p class="mb-0 px-3">
+                2026 © Hak Cipta. Masjid Al-Amin
+            </p>
+            <p class="mb-0 px-3">
+                Powered by Al-Amin IT Team
+            </p>
+        </div>
     </div>
 </nav>
